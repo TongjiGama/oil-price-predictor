@@ -1,0 +1,29 @@
+# config/arima_config.yaml
+# 训练参数
+epochs: 1  # ARIMA只需要1个epoch
+batch_size: 1
+learning_rate: 0.001
+weight_decay: 0.00001
+
+# 数据参数
+train_ratio: 0.7
+val_ratio: 0.15
+test_ratio: 0.15
+sequence_length: 10
+shuffle: false
+
+# 模型参数
+model_type: 'ARIMA'
+input_size: 1
+hidden_size: 64
+num_layers: 2
+dropout: 0.2
+output_size: 1
+
+# ARIMA参数
+arima_order: [5, 1, 0]
+arima_seasonal_order: [0, 0, 0, 0]
+
+# 特征配置
+feature_columns: ['Price']
+target_column: 'Price'

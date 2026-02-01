@@ -1,0 +1,33 @@
+# configs/default.yaml
+# 数据配置
+data_path: "data/RBRTEd.csv"
+train_ratio: 0.7
+val_ratio: 0.15
+test_ratio: 0.15
+sequence_length: 10
+batch_size: 32
+
+# 特征配置
+feature_columns: ["Open", "High", "Low", "Volume"]
+target_column: "Price"
+
+# 模型配置
+model_type: "LSTM"
+hidden_size: 128
+num_layers: 3
+dropout: 0.3
+output_size: 1
+
+# 训练配置
+epochs: 200
+learning_rate: 0.001
+weight_decay: 0.0001
+gradient_clip: 1.0
+early_stopping_patience: 15
+
+# 系统配置
+seed: 42
+device: "cuda"
+save_dir: "checkpoints/"
+log_dir: "logs/"
+results_dir: "results/"
