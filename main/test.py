@@ -69,6 +69,7 @@ class Tester:
             self.model = ARIMAModel.load(model_path)
             print(f"已加载ARIMA模型: {model_path}")
             return
+
         
         # LSTM等深度学习模型用.pth格式
         checkpoint = torch.load(model_path, map_location=self.device)
